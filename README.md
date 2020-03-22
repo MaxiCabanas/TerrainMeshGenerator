@@ -1,13 +1,15 @@
 # TerrainMeshGenerator
-Procedural "Low Poly" like terrain generator.
+## Procedural "Low Poly" like terrain generator.
 
-Preview:
+__Preview:__
 
 ![screenshotMesh](screenshots/screenshotMesh.jpg)
 
-Configurable variables:
+__Configurable variables:__
 
 ![screenshotInspector](screenshots/screenshotInspector.jpg)
 
-Unity version: 2019.3.6f1 
-Render Pipeline (color shader): Universal Render Pipeline
+## You can also download just the [Unity Package](ProceduralMeshTerrain.unitypackage)
+
+- Unity version: **2019.3.6f1**
+- Render Pipeline (vertex color shader): **Universal Render Pipeline**
