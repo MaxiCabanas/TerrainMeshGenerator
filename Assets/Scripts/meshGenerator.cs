@@ -111,13 +111,24 @@ public class meshGenerator : MonoBehaviour
         {
             for(int x=0;x<xMeshSize;x++)
             {
-                // Un triangulo no es mas que 3 numeros enteros, que reprecentan las coordenadas de los vertices que lo conforman.
-                // Por ejemplo (0,2,1) y (1,2,3) son los dos triangulos de la siguiente matriz:
-                // 2------3
-                // |      |
-                // |      |
-                // 0------1
-                // Esta seccion del codigo me genera dos triangulos, usando la variable "vert" puedo ir generando estos dos triangulos en toda la matris de vertices.
+                // Un triangulo no es mas que 3 numeros enteros, que representan los indices de los vertices de la matriz (mesh), ordenados linealmente.
+                // Por ejemplo, si a la matriz:
+                // (0,0)----(0,1)
+                //   |        |
+                //   |        |
+                // (1,0)----(1,1)
+                // le asignamos un indice a cada componente, en lugar de una coordenada, podemos representarla como:
+                // 2-----3
+                // |     |
+                // |     |
+                // 0-----1
+                // Entonces podemos decir que los vectores (0,2,1) y (1,2,3) son los dos triangulos de la matriz anterior:
+                // 2----3
+                // | \  |
+                // |  \ |
+                // 0----1
+                // Esta seccion del codigo me genera dos triangulos. Como son almacenados en un arreglo unidimensional, usando la variable "vert" puedo ir generando estos dos triangulos en toda la matris de vertices.
+                
                 triangles[tris + 0] = vert + 0;
                 triangles[tris + 1] = vert + xMeshSize + 1;
                 triangles[tris + 2] = vert + 1;
